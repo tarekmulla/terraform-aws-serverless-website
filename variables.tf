@@ -29,3 +29,13 @@ variable "alert_emails" {
   description = "The email addresses list"
   default     = ["alert@example.com"]
 }
+
+variable "images_path" {
+  description = "The path for website images"
+  type        = string
+}
+
+variable "website_files_path" {
+  description = "The path for website files"
+  type        = string
+}

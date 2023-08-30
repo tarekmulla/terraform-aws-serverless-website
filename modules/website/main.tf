@@ -2,7 +2,7 @@ data "aws_caller_identity" "current" {}
 
 module "website_files" {
   source   = "hashicorp/dir/template"
-  base_dir = "../webapp/build"
+  base_dir = var.website_files_path
 }
 
 resource "aws_s3_object" "static_files" {

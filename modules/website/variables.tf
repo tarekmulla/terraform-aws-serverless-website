@@ -22,3 +22,13 @@ variable "cloudfront_dist_arn" {
   description = "cloudfront_dist_arn"
   type        = string
 }
+
+variable "images_path" {
+  description = "The path for website images"
+  type        = string
+}
+
+variable "website_files_path" {
+  description = "The path for website files"
+  type        = string
+}

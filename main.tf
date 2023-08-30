@@ -4,7 +4,7 @@ provider "aws" {
 
 module "sns" {
   source       = "./modules/sns"
-  app              = var.app
+  app          = var.app
   alert_emails = var.alert_emails
   tags         = local.tags
 }
@@ -61,6 +61,8 @@ module "website" {
   app_bucket_arn      = module.s3_bucket.arn
   app_bucket_id       = module.s3_bucket.id
   cloudfront_dist_arn = module.cdn.cloudfront_dist_arn
+  website_files_path  = var.website_files_path
+  images_path         = var.images_path
   tags                = local.tags
   depends_on = [
     module.s3_bucket,

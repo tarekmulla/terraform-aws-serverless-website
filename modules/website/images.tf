@@ -1,6 +1,6 @@
 module "website_images" {
   source   = "hashicorp/dir/template"
-  base_dir = "../webapp/images"
+  base_dir = var.images_path
 }
 
 resource "aws_s3_object" "images" {
