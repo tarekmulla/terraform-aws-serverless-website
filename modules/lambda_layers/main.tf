@@ -32,7 +32,7 @@ module "lambda_layer" {
   ]
   for_each = local.layers
   source   = "terraform-aws-modules/lambda/aws"
-  version  = "5.0.0"
+  version  = "6.0.0"
 
   create_layer = true
 

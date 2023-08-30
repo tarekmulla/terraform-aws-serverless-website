@@ -19,7 +19,7 @@ resource "aws_s3_object" "lambda_code_zip" {
 module "contact_lambda" {
   depends_on = [aws_s3_object.lambda_code_zip]
   source     = "terraform-aws-modules/lambda/aws"
-  version    = "5.0.0"
+  version    = "6.0.0"
 
   function_name  = "${var.app}-${terraform.workspace}-contact"
   description    = "lambda function to send an email when receive contact message"
